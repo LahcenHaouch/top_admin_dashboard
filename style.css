@@ -12,6 +12,13 @@ svg {
   fill: var(--color-primary);
 }
 
+img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #a51d2d;
+}
+
 body {
   color: var(--color-primary);
   display: grid;
@@ -69,12 +76,32 @@ body {
           border-radius: 4rem;
           padding: 0.5rem 2rem;
         }
+
+        .profile {
+          justify-self: end;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+
+          img {
+            border-color: #26a269;
+          }
+        }
       }
 
       .banner-level-2 {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .hero {
+          display: flex;
+          gap: 1rem;
+
+          img {
+            border-color: #26a269;
+          }
+        }
 
         .actions {
           display: flex;
@@ -143,6 +170,15 @@ body {
           background-color: var(--bg-tertiary);
           padding: 2rem;
           border-radius: 4px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          & > div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+          }
         }
       }
     }
