@@ -69,6 +69,7 @@ body {
       .banner-level-1 {
         display: grid;
         grid-template-columns: 2fr 1fr;
+        align-items: center;
         margin-bottom: 2rem;
 
         #search {
@@ -78,6 +79,8 @@ body {
           border: none;
           border-radius: 4rem;
           padding: 0.5rem 2rem;
+
+          height: 50px;
         }
 
         .profile {
