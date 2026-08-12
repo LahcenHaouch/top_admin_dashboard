@@ -1,41 +1,70 @@
 :root {
-  --primary: #28282c;
-  --secondary: #39393d;
+  --bg-primary: #222226;
+  --bg-secondary: #28282c;
+  --bg-tertiary: #39393d;
+
+  --color-primary: white;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+  fill: var(--color-primary);
 }
 
 body {
-  color: white;
+  color: var(--color-primary);
   display: grid;
   grid-template-columns: 250px 1fr;
 
-  header {
-    background-color: var(--primary);
-    color: white;
+  sidebar {
+    background-color: var(--bg-primary);
+    color: var(--color-primary);
     padding: 1rem;
+    border-right: 1px solid var(--bg-tertiary);
 
     h1 {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       margin-bottom: 2rem;
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     ul {
       list-style: none;
       padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
     }
   }
 
   main {
-    background-color: var(--primary);
+    background-color: var(--bg-primary);
     .banner {
-      padding: 1rem 2rem;
+      padding: 2rem;
+      border-bottom: 1px solid var(--bg-tertiary);
+      background-color: var(--bg-primary);
       .banner-level-1 {
         display: grid;
         grid-template-columns: 2fr 1fr;
         margin-bottom: 2rem;
 
         #search {
-          color: white;
+          color: var(--color-primary);
           grid-column: 1 / 2;
-          background-color: var(--secondary);
+          background-color: var(--bg-tertiary);
           border: none;
           border-radius: 4rem;
           padding: 0.5rem 2rem;
@@ -52,8 +81,8 @@ body {
           gap: 2rem;
           button {
             padding: 0.5rem 1.5rem;
-            background-color: var(--secondary);
-            color: white;
+            background-color: var(--bg-tertiary);
+            color: var(--color-primary);
             font-weight: bold;
             border: none;
             border-radius: 2rem;
@@ -63,7 +92,7 @@ body {
     }
 
     .content {
-      background-color: var(--primary);
+      background-color: var(--bg-secondary);
       padding: 1rem;
       display: grid;
       grid-template-columns: 3fr 1fr;
@@ -75,14 +104,12 @@ body {
 
         .card-list {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: repeat(3, 1fr);
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           gap: 1rem;
 
           .card {
-            background-color: var(--secondary);
+            background-color: var(--bg-tertiary);
             padding: 2rem 1rem;
-            border: 1px solid black;
             border-radius: 4px;
           }
         }
@@ -94,7 +121,7 @@ body {
         border-radius: 4px;
 
         .annoucement-list {
-          background-color: var(--secondary);
+          background-color: var(--bg-tertiary);
           padding: 2rem;
           border-radius: 4px;
 
@@ -104,7 +131,7 @@ body {
 
           .annoucement:not(:last-child) {
             padding-bottom: 1rem;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid var(--color-primary);
           }
         }
       }
@@ -113,7 +140,7 @@ body {
         grid-column: 2 / -1;
 
         .trending-list {
-          background-color: var(--secondary);
+          background-color: var(--bg-tertiary);
           padding: 2rem;
           border-radius: 4px;
         }
