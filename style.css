@@ -4,6 +4,7 @@
   --bg-tertiary: #39393d;
 
   --color-primary: white;
+  --color-secondary: #f6f5f4;
 
   --border-online: #26a269;
   --border-offline: #a51d2d;
@@ -129,7 +130,6 @@ body {
       padding: 1rem;
       display: grid;
       grid-template-columns: 3fr 1fr;
-      grid-template-rows: 1fr 1fr;
       gap: 1rem;
 
       .projects {
@@ -144,6 +144,10 @@ body {
             background-color: var(--bg-tertiary);
             padding: 2rem 1rem;
             border-radius: 4px;
+
+            p {
+              color: var(--color-secondary);
+            }
           }
         }
       }
@@ -157,6 +161,10 @@ body {
           background-color: var(--bg-tertiary);
           padding: 2rem;
           border-radius: 4px;
+
+          p {
+            color: var(--color-secondary);
+          }
 
           .annoucement:not(:first-child) {
             padding-top: 1rem;
@@ -184,6 +192,14 @@ body {
             display: flex;
             align-items: center;
             gap: 1rem;
+
+            p:first-child {
+              font-weight: bold;
+            }
+
+            p:last-child {
+              color: var(--color-secondary);
+            }
           }
         }
       }
