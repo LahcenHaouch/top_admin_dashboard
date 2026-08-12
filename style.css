@@ -4,6 +4,9 @@
   --bg-tertiary: #39393d;
 
   --color-primary: white;
+
+  --border-online: #26a269;
+  --border-offline: #a51d2d;
 }
 
 svg {
@@ -16,7 +19,7 @@ img {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  border: 2px solid #a51d2d;
+  border: 2px solid var(--border-offline);
 }
 
 body {
@@ -84,7 +87,7 @@ body {
           align-items: center;
 
           img {
-            border-color: #26a269;
+            border-color: var(--border-online);
           }
         }
       }
@@ -99,7 +102,7 @@ body {
           gap: 1rem;
 
           img {
-            border-color: #26a269;
+            border-color: var(--border-online);
           }
         }
 
