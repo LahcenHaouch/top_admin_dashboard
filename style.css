@@ -1,8 +1,5 @@
 :root {
   --bg-primary: #222226;
-  --bg-hover: #fff;
-  --bg-active: #fff;
-
   --bg-secondary: #28282c;
   --bg-tertiary: #39393d;
 
@@ -80,15 +77,29 @@ body {
         align-items: center;
         margin-bottom: 2rem;
 
-        #search {
-          color: var(--color-primary);
-          grid-column: 1 / 2;
-          background-color: var(--bg-tertiary);
-          border: none;
-          border-radius: 4rem;
-          padding: 0.5rem 2rem;
+        .search-container {
+          position: relative;
+          #search {
+            width: 100%;
+            color: var(--color-primary);
+            grid-column: 1 / 2;
+            background-color: var(--bg-tertiary);
+            border: none;
+            border-radius: 4rem;
+            padding: 0.5rem 3rem 0.5rem 2rem;
 
-          height: 50px;
+            height: 50px;
+
+            &::-webkit-search-cancel-button {
+              display: none;
+            }
+          }
+
+          svg {
+            position: absolute;
+            right: 1rem;
+            top: 30%;
+          }
         }
 
         .profile {
