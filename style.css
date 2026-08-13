@@ -1,7 +1,14 @@
 :root {
   --bg-primary: #222226;
+  --bg-hover: #fff;
+  --bg-active: #fff;
+
   --bg-secondary: #28282c;
   --bg-tertiary: #39393d;
+
+  --bg-button: #3584e4;
+  --bg-button-hover: #1c71d8;
+  --bg-button-active: #1a5fb4;
 
   --color-primary: white;
   --color-secondary: #f6f5f4;
@@ -115,11 +122,19 @@ body {
           gap: 2rem;
           button {
             padding: 0.5rem 1.5rem;
-            background-color: var(--bg-tertiary);
+            background-color: var(--bg-button);
             color: var(--color-primary);
             font-weight: bold;
             border: none;
             border-radius: 2rem;
+
+            &:hover {
+              background-color: var(--bg-button-hover);
+            }
+
+            &:active {
+              background-color: var(--bg-button-active);
+            }
           }
         }
       }
