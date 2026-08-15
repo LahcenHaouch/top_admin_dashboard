@@ -124,6 +124,10 @@ body {
           display: flex;
           gap: 1rem;
 
+          p {
+            font-family: "Edu NSW ACT Cursive", sans-serif;
+          }
+
           img {
             border-color: var(--border-online);
           }
